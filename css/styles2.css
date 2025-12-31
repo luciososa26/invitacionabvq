@@ -1,0 +1,141 @@
+/* =========================
+   FUENTES
+========================= */
+@font-face {
+  font-family: 'Wellfleet';
+  src: url('../Font/Wellfleet.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StyleScript';
+  src: url('../Font/StyleScript.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   TARJETA
+========================= */
+.Tarjeta {
+  background-image: url('/Fondo.png');
+  width: 680px;
+  height: 3000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   IMAGEN PRINCIPAL
+========================= */
+.contenedor-imagen {
+  position: relative;
+  width: 620px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.ImagenPrincipal {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 20px solid white;
+  box-sizing: border-box;
+}
+
+/* Imagen decorativa */
+.HojaIzq {
+  position: absolute;
+  top: 10px;
+  right: 360px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+/* =========================
+   TEXTO
+========================= */
+.TextoInfor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 400px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.TextoInfor h1 {
+  font-family: 'Wellfleet', serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin: 0;
+}
+
+.TextoInfor h2 {
+  font-family: 'StyleScript', cursive;
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+/* =========================
+   IMAGEN CON ANIMACIÓN
+========================= */
+@keyframes zoomSuave {
+  0%, 100% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.20);
+  }
+}
+
+.TextoInfor img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  animation: zoomSuave 4s ease-in-out infinite;
+}
+
+.Imagen2 {
+    width: 620px;
+    border: 20px solid white;
+    margin: 30px;
+}
+
+.Texto1 {
+  background-color: #fff;
+  width: 680px;
+  padding: 60px;
+
+  -webkit-mask-image: url('/23481-Photoroom\ 1.png');
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  mask-image: url('/23481-Photoroom\ 1.png');
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
